@@ -1,24 +1,17 @@
-import logo from './logo.svg';
+import { useState } from 'react';
+import AddColor from './AddColor'
 import './App.css';
 
 function App() {
+  const [colorName, setColor] = useState('')
+  const [hexValue,setHexValue] = useState('')
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AddColor
+    hexValue={hexValue}
+    setHexValue={setHexValue}
+      colorName={colorName}
+      setColor={setColor}
+    />
   );
 }
 
